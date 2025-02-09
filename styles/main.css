@@ -1,0 +1,340 @@
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 2rem;
+    background-color: #f6d0bb;
+    color: black;
+    margin-bottom: 40px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    height: 50px;
+    top: 0;
+}
+.nav-links{
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+}
+.nav-links a{
+    font-weight: 600;  
+}
+.nav-links a:hover{
+    color: #e1525f;
+}
+.icon-cart{
+    cursor: pointer;
+}
+.cart-quantity{
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+.logout{
+   color: #e1525f;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+}
+.logo svg{
+    position: relative;
+    top: 39px;
+    left: 33px;
+}
+.hero{
+    background-color: #f6d0bb;
+    padding:2rem 2rem 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 20px;
+}
+.hero-content h1{
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 80px;
+
+}
+.hero-content p{
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 80px;
+
+}
+.hero-content button{
+    font-size:medium;
+    font-weight: 400;
+    line-height: 80px;
+    color: white;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 52px;
+    position: relative;
+    z-index: 1;
+}
+.square{
+    width: 200px;
+    height: 52px;
+    position: relative;
+    z-index: 0;
+    border: 7px solid black;
+    left: 29px;
+    top: 67px;
+}
+.hero img{
+    width: 400px;
+    height: 400px;
+}
+.all-products{
+    margin: 2rem;
+}
+.all-products h2{
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 80px;
+    color: #e1525f;
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    gap: 4rem;
+    padding: 2rem 0;
+    background-color: white;
+    margin: 0;
+}
+.product-item{
+    /* background-color: ; */
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 500px;
+    margin: 0;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+    text-wrap: wrap;
+}
+.product-item:hover{
+    transform: translateY(-40px) ;
+}
+
+.product-item h1, .product-item p{
+    text-wrap: wrap;
+    margin: 1rem 0 ;
+    width: 80%;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /*Number of lines i want to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-item h1{
+    font-weight: 600;
+    font-size: large;
+}
+.product-item span{
+    font-weight: 400;
+    font-style: italic;
+    color: red;
+    opacity: .7;
+}
+.product-item p{
+    font-weight: 500;
+    font-size: small;
+    color: black;
+    opacity: 0.7;
+}
+.product-item button{
+    background-color: #f6d0bb;
+    color: black;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: normal;
+    width: 400px;
+    position: fixed;
+    right: -400px; /* Hidden by default */
+    top: 0;
+    bottom: 0;
+    gap: 2rem;
+    padding: 2rem 0;
+    background-color: white;
+    margin: 0;
+    transition: right 0.5s ease-in-out; /* Smooth transition for 'right' */
+    overflow-y: scroll;
+    z-index: 101;
+}
+
+.show-cart {
+    right: 0; /* Slide into view */
+}
+
+.cart-header svg{
+   color: rgba(0, 0, 0, 0.7);
+
+}
+.cart-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+    color: #e1525f;
+}
+.cart-header button{
+    /* color: #e1525f; */
+    text-decoration: underline;
+    border-bottom: 1px solid #e1525f;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+}
+
+.close{
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    text-align: right;
+}
+.cart-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 0;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}   
+
+.item{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 20px;
+    transition: all 0.5s ease-in-out;
+}
+.totalPrice{
+    color: red;
+    opacity: 0.7;
+}
+.quantity span{
+    font-size: 27px;
+}
+
+.plus, .minus{
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    color: #e1525f;
+}
+
+
+.item img{
+    width: 50px;
+    height: 50px;
+}
+
+.total{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #e1525f;
+    color: white;
+    padding:0 2rem;
+
+}
+.total h3{
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 70px;
+}
+.total span{
+    font-style: italic;
+}
+
+.botton-up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    padding: 10px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    margin-top: 2rem;
+    background-color: #e1525f;
+}
+
+@media (max-width: 569px){
+    .hero{
+        gap:4rem;
+    }
+    .cart{
+        width: 100dvw;
+        right: -100vh;
+    }
+    .show-cart{
+        top:0;
+        right: 0;
+        bottom: 0;
+        transition: all 0.5s ease-in-out;
+    }
+    .hero-content h1{
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 60px;
+    
+    }
+    .hero-content p{
+        font-size: 27px;
+        font-weight: 600;
+        line-height: 50px;
+    
+    }
+}
