@@ -1,11 +1,12 @@
 // Check if a user is logged in
-const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+document.addEventListener("DOMContentLoaded", () => {
+    const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
-if (!loggedInUser) {
-  // Redirect to the login page
-  window.location.href = "/src/login.html";
-}
-
+    if (!loggedInUser) {
+    // Redirect to the login page
+    window.location.href = "/src/login.html";
+    }
+});
 
 let body = document.querySelector('body');
 let iconCart = document.querySelector('.icon-cart');

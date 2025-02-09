@@ -1,5 +1,14 @@
 // login.js
 // Check if a user is already logged in
+document.addEventListener("DOMContentLoaded", () => {
+  const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+
+  // Redirect logged-in users to the home page
+  if (loggedInUser) {
+      window.location.href = "index.html";
+  }
+});
+
 const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
 if (loggedInUser) {
@@ -26,6 +35,8 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
   if (email === storedUser.email && password === storedUser.password) {
     // Store logged-in state in localStorage
     localStorage.setItem("loggedInUser", JSON.stringify(storedUser));
+    // Replace the current history entry with the home page
+    history.replaceState(null, null, "../index.html");
     const userCartKey = `cart_${email}`;
     const userCart = JSON.parse(localStorage.getItem(userCartKey));
     if (!userCart) {

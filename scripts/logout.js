@@ -1,5 +1,6 @@
 // logout.js
 // Check if a user is logged in
+
 const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 console.log(loggedInUser);
 if (!loggedInUser) {
